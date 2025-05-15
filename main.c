@@ -7,10 +7,13 @@ int main(int argc, char const *argv[])
     if (argc >= 2)
     {
         if (does_file_exist(argv[1]))
+        {
             printf("%s\n", argv[1]);
+        }
+        else
+        {
+            printf("Couldn't open %s\n", argv[1]);
+        }
     }
-
-    // void* image = NULL; // Start off as empty
-
     return 0;
 }
